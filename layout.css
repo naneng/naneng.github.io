@@ -3,18 +3,37 @@
  *
  */
 
+.text-center {
+    text-align: center;
+ }
+
+.container {
+  height: 95vh;
+  background-image: url('https://i.imgur.com/tdOqXdH.jpg'),
+  linear-gradient(
+    to bottom,
+    rgba(126,213,111,0.8),
+    rgba(40, 180, 131, 0.8));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*position: relative*/
+
+}
+
+
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: #f4f4f4;
+  /*background: #F8F8EE;*/
 }
 
 h1, h2, h3 {
-  color: #222;
+  color: #F8F8EE;
 }
 
 p {
   line-height: 24px;
-  color: #555;
+  color: rgb(234, 227, 227);
 }
 
 a {
@@ -26,13 +45,20 @@ a:hover {
   text-decoration: underline;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .content {
   width: 940px;
   margin: 0 auto;
+  display: flex;
 }
 
 #header  {
   border-bottom: 1px solid #999;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav {
