@@ -1,82 +1,561 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>About Me</title>
-    <link rel="stylesheet" href="layout.css" type="text/css">
-    <script src="javascript.js" charset="utf-8"></script>
-
+    <meta charset="UTF-8" />
+    <title>KKM Portfolio</title>
+    <link rel="stylesheet" href="layout.css" type="text/css" />
+    <script type="text/javascript" src="javascript.js"></script>
   </head>
   <body>
-    <div class="container">
-
-      <div id="header" class="content">
-          <h1>About Me</h1>
-          <p>
-          My name is Katrina and after working over 6 years in public accounting, I realized, accounting is not the career I would be passionate for. I quit my job and now in pursuit to become a web developer.
-          </p>
+    <!--------------   header section   -------------->
+    <header>
+      <div class="logo">
+        <img src="./assets/KA_logo.svg" />
       </div>
-
-      <div id="flex" class="content clearfix">
-        <!-- Page Navigation -->
-        <div id="nav">
-        <p></p>
-        <img src="https://naneng.github.io/profile/images/KLyks.jpg">
-          <h2>Navigation</h2>
-
-          <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#fun-facts">Fun Facts</a></li>
-          </ul>
-        </div>
-
-        <!-- Main content area -->
-        <div id="main">
-          <h2 id="projects">Projects</h2>
-          <p>Describe the kinds of projects you like to work on and give a brief overview of how you accomplished them...</p>
-
-          <h3>Project #1 Title</h3>
-          <p>Project #1 Description...</p>
-
-          <h3>Project #2 Title</h3>
-          <p>Project #2 Description...</p>
-
-          <h2 id="hobbies">Hobbies</h2>
-
-          <p>What else do you do in your spare time?</p>
-
-          <h3>Item #1 Title</h3>
-          <p>Use this paragraph to explain Item #1</p>
-          <ul>
-            <li>Cool thing I did</li>
-            <li>Another cool thing I did</li>
-            <li>Final cool thing I did</li>
-          </ul>
-
-          <h3>Item #1 Title</h3>
-          <p>Use this paragraph to explain Item #1</p>
-          <ul>
-            <li>Cool thing I did</li>
-            <li>Another cool thing I did</li>
-            <li>Final cool thing I did</li>
-          </ul>
-
-          <h2 id="fun-facts">Fun Facts</h2>
-          <h3>Subhead</h3>
-          <p>Use this list to tell us some fun things about yourself.</p>
-          <ul>
-            <li>Cool thing I did</li>
-            <li>Another cool thing I did</li>
-            <li>Final cool thing I did</li>
-          </ul>
-
-        </div>
-      </div>
-
-      <div id="copyright" class="content text-center">
-        &copy; 2019 Katrina Ariola, All Rights Reserved.
-      </div>
-
+      <!-- <div class="face">
+    <img src="./assets/face-without-eyes.svg">
+    <div class="iris iris-left">
+      <div></div>
     </div>
+    <div class="iris iris-right">
+      <div></div>
+    </div>
+  </div> -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!--------------   header section END  -------------->
+
+    <!--------------   about section   -------------->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="content">
+          <h3 class="fn-logo slide-down">
+            <img src="./assets/kaa1_logo.png" />
+          </h3>
+          <p>
+            >/full-stack.web.developer/ with a passion for creating intuitive
+            and playful web experiences <+> humanize interfaces through which we
+            communicate, share ideas, and connect with one another.
+          </p>
+        </div>
+
+        <div class="image">
+          <img src="./assets/KA_BrandingGradient.png" />
+        </div>
+
+        <a href="#portfolio" class="js-scroll scroll-to scroll-to-intro"></a>
+      </div>
+    </section>
+    <!--------------   about section   END-------------->
+
+    <!--------------  portfolio section   -------------->
+    <section class="portfolio" id="portfolio">
+      <div class="svg-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.34 137.57">
+          <text
+            style="
+              font-family: Galvji-Bold, Galvji;
+              font-size: 55.24px;
+              font-weight: 700;
+            "
+            transform="translate(194.33 122.2)">
+            <tspan x="0" y="0">{}</tspan>
+          </text>
+          <path
+            d="M89.73 131.75H59.9L32.07 93.02l-6.92 7.09v31.64H0V0h25.15v73.66h1.56l31.9-37.26h28.61L50.91 77.29l38.82 54.46zM173.7 53.04c-1.75-4.01-4.31-7.39-7.65-10.16-3.34-2.76-7.47-4.88-12.4-6.35-4.93-1.47-10.54-2.21-16.82-2.21s-11.45.67-16.38 1.99c-4.93 1.33-9.2 3.24-12.84 5.75-3.63 2.51-6.52 5.53-8.68 9.08-2.16 3.54-3.45 7.51-3.85 11.88h23.17c1.03-2.88 3.02-5.07 5.96-6.57 2.94-1.49 6.69-2.24 11.24-2.24 5.24 0 9.24 1.08 11.97 3.24 2.74 2.16 4.11 5.23 4.11 9.2v7.79l-23.08 1.38c-11.93.69-21.07 3.47-27.4 8.34-6.35 4.87-9.51 11.66-9.51 20.36 0 4.38.76 8.33 2.29 11.84 1.52 3.52 3.67 6.53 6.44 9.04 2.76 2.5 6.05 4.43 9.85 5.79 3.81 1.35 8.01 2.03 12.62 2.03 6.23 0 11.77-1.23 16.64-3.67 4.87-2.45 8.55-5.87 11.03-10.25h1.55v12.45h24.38v-65.1c0-5.07-.88-9.6-2.64-13.61Zm-22.17 44.13c0 2.42-.52 4.67-1.56 6.74-1.03 2.08-2.48 3.89-4.32 5.45-1.84 1.56-4.01 2.77-6.48 3.63-2.48.87-5.19 1.3-8.13 1.3-4.38 0-7.95-1.01-10.72-3.03-2.76-2.01-4.15-4.81-4.15-8.38 0-6.92 5.36-10.75 16.08-11.5l19.28-1.21v7Z" />
+        </svg>
+      </div>
+
+      <h1>Portfolio</h1>
+
+      <nav class="filters">
+        <div class="container">
+          <a href="#" class="show-filters">Projects Coded With <+></a>
+          <ul class="filters-list" id="filters-list">
+            <li>
+              <a href="#" class="selected" data-filter=".project">All</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".html">HTML</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".css">CSS</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".javascript">Javascript</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".react">React</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".rubyonrails">Ruby on Rails</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".sql">SQL</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden box">
+        <!--    our inner element is 2x the width and scrolls from right to left like a film strip    -->
+        <div class="w-200 h-100 conveyor flex items-stretch">
+          <div class="project css html javascript react w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://fr1cdo.csb.app/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">MilkyMood</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div
+            class="project css html javascript react w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://ll03p1.csb.app/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Zesty</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://super-shapes-200.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Super Shapes</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div
+            class="project css html javascript rubyonrails w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://naneng.github.io/middleman-airbnb/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">MiddlemanBnB</h2>
+              <p class="project_info">2018 <+> LeWagon <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://fifty-festival-418.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">FIFTY Festival</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://jiffy-288.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Jiffy</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://good-times-176.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Good Times</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://blobbo-64.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Blobbo</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://nice-colors-42.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Nice Colors</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://pink-noise-55.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Pink Noise</h2>
+              <p class="project_info">2023 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://flower-brush-100.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Flower Brush</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://snake-46.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Snake</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://flying-letters-50.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Flying Letters</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://wallball-14.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">WallBall</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://words-of-womxn-213.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Words of Womxn</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project html css javasript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://brux-377.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Brux</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://jenna-buchnolz.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Jenna Buchnolz</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project html css javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://type-checker-475.superhi.com/"
+              target="_blank"
+              value=" css javascript">
+              <h2 class="project_title">Type Checker</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://rose-culver-709.superhi.com/"
+              target="_blank"
+              value=" css javascript">
+              <h2 class="project_title">Rose Culver</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://plant-life-572.superhi.com/"
+              target="_blank"
+              value=" css javascript">
+              <h2 class="project_title">Plant Life</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project html css javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://boyce-slideshow-632.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">Boyce Slideshow</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://sally-hart-ii-1.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">Sally Hart Lightbox</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://interior-weekly-870.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">Interior Weekly</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="https://valencia-409.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">Valencia</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://baker-and-brown-259.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">Baker + Brown</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://hexagon-27.superhi.com/"
+              target="_blank"
+              value="javascript">
+              <h2 class="project_title">The Hexagon</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project html css javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://essmei-1540.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">ESSMEI</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://nasa-625.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">NASA</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-blue box">
+            <a
+              class="project_item"
+              href="http://boyce-1997.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">Boyce</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html javascript w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://lolas-cookery-7.superhi.com/"
+              target="_blank"
+              value="html css javascript">
+              <h2 class="project_title">Lola's Cookery</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://furneauxs-1171.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">Furneaux's</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://source-hw-17.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">Source</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-red box">
+            <a
+              class="project_item"
+              href="https://patio-3058.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">Patio</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-purple box">
+            <a
+              class="project_item"
+              href="https://the-pen-is-mightier-46.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">The Pen Is Mightier</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+
+          <div class="project css html w-25 h-100 bg-yellow box">
+            <a
+              class="project_item"
+              href="https://sally-hart-3647.superhi.com/"
+              target="_blank"
+              value="html css">
+              <h2 class="project_title">Sally Hart</h2>
+              <p class="project_info">2022 <+> SuperHi <+> Portfolio</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a href="#contact" class="js-scroll scroll-to scroll-to-intro"></a> -->
+    </section>
+    <!--------------   portfolio section   END-------------->
+
+    <!--------------   contact section   -------------->
+    <section class="contact" id="contact">
+      <div class="marquee">
+        <span>Get in Touch</span>
+      </div>
+
+      <div class="container">
+        <div class="contact-form" id="contact-form">
+          <form
+            id="my-form"
+            action="https://formspree.io/f/mjvdrypv"
+            method="POST">
+            <!-- <label>Email:</label> -->
+            <div class="app-form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="your email"
+                required />
+              <!-- <label>email</label> -->
+            </div>
+            <div class="app-form-group">
+              <input
+                type="message"
+                name="message"
+                placeholder=" drop me a note..."
+                required />
+              <!-- <label>message</label> -->
+            </div>
+            <button id="my-form-button">SUBMIT</button>
+
+            <p id="my-form-status">
+              ..got your message. thanks for dropping by..
+            </p>
+          </form>
+        </div>
+
+        <div class="contact-social">
+          <div class="contact-logo">
+            <img src="./assets/KA_logo.svg" />
+          </div>
+
+          <div class="social flex justify-between items-center">
+            <a href="https://github.com/naneng" class="db">
+              <img src="./assets/githubicon.svg" class="db" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/katrina-ariola-b7384812/"
+              class="no-underline ml3 db">
+              <img src="./assets/linkedinicon.svg" class="db" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>Copyrights 2023 Katrina Ariola. All rights reserved.</p>
+      </div>
+    </section>
+    <!--------------   contact section   END-------------->
   </body>
 </html>
