@@ -324,6 +324,16 @@ section {
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
+.portfolio .project a:hover {
+  color: var(--purple);
+}
+
+.portfolio .bg-purple {
+  background-color: var(--purple);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
 .portfolio .svg-logo {
   margin-top: 150px;
   margin-bottom: 40px;
