@@ -166,9 +166,7 @@ section {
 .about .scroll-to {
   position: absolute;
   left: 50%;
-  /* left: 80px; */
-
-  width: 60px;
+  width: 30px;
   height: 15px;
 
   background-image: url(./assets/KA_arrow.svg);
@@ -176,7 +174,7 @@ section {
   background-size: contain;
   background-position: center;
   transform: translateX(-50%);
-  padding: 10px 0 2px 0;
+  padding: 10px 0 10px 0;
 }
 
 /* .portfolio .scroll-to {
@@ -237,6 +235,9 @@ section {
   content: url("./assets/ka_profile_photo.png");
   transition: background-image 3s;
   padding-top: 10px;
+  padding-bottom: 24px;
+  /* height: 100%; */
+  /* width: none; */
 }
 
 .about .fn-logo {
@@ -469,7 +470,7 @@ button:hover {
 }
 
 .contact .contact-direct span {
-  margin-left: 15px;
+  margin-left: 45px;
   font-size: 10px;
   margin-top: auto;
 }
