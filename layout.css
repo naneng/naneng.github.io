@@ -39,6 +39,24 @@
   }
 }
 
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-90px);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
 body {
   font-family: "Rubik", Arial;
   font-size: 14px;
@@ -271,6 +289,16 @@ section {
   /* border-color: red; */
   color: var(--red);
   border-bottom: 0.1rem solid;
+}
+
+.svg-logo text {
+  animation: move-up 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.25s;
+  /* transform-origin: inherit; */
+}
+
+.svg-logo text:first-child {
+  animation-name: move-down;
 }
 
 .portfolio .project:hover {
