@@ -42,7 +42,7 @@ function makeMarquee() {
 makeMarquee();
 
 const animatedTags = document.querySelectorAll(
-  "h1, h3, p, section img, nav, a.button, #my-form, header, a.marquee, a.js-scroll, .contact-direct"
+  "h1, h3, p, section img, nav, a.button, #my-form, header, a.marquee, .marquee, a.js-scroll, .contact-direct"
 );
 
 // fade out on load
