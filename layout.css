@@ -301,6 +301,10 @@ section {
   animation-name: move-down;
 }
 
+.svg-logo text:hover {
+  fill: var(--purple);
+}
+
 .portfolio .project:hover {
   background-color: #a9c9ff;
   background-image: linear-gradient(170deg, var(--purple) 0%, var(--lblue) 90%);
