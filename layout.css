@@ -305,6 +305,11 @@ section {
   fill: var(--purple);
 }
 
+.portfolio .svg-logo {
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+
 .portfolio .project:hover {
   background-color: #a9c9ff;
   background-image: linear-gradient(170deg, var(--purple) 0%, var(--lblue) 90%);
@@ -367,10 +372,6 @@ section {
   box-shadow: none;
 }
 
-.portfolio .svg-logo {
-  margin-top: 150px;
-  margin-bottom: 40px;
-}
 /*           ------portfolio end------              */
 
 /*         ------------- contact-------------             */
