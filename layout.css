@@ -327,10 +327,22 @@ section {
   font-size: 50px;
   font-weight: 700;
 }
+.portfolio h3 {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 8px;
+  position: absolute;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  padding: 0 2px;
+
+}
 
 .portfolio li {
   display: inline;
 }
+
+
 
 .portfolio .show-filters {
   margin-right: 15px;
@@ -365,6 +377,11 @@ section {
 .portfolio .project a:hover {
   color: var(--purple);
 }
+
+/* .portfolio .project span {
+  text-decoration: none;
+  color: var(--lblue);
+} */
 
 .portfolio .bg-purple {
   background-color: var(--purple);
