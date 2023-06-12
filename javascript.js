@@ -18,7 +18,6 @@ const fadeBox = function () {
 
   headerTag.style.boxShadow = `0 0 10px rgba(0, 0, 0, ${alpha})`;
 };
-
 fadeBox();
 toggleHeader();
 
@@ -29,20 +28,16 @@ document.addEventListener("scroll", function () {
 
 // marquee and animatedTag transition animations >>>>
 function makeMarquee() {
-  const title = "   Get in Touch  ";
-  // const img = document.createElement("img")
-  // img.src = "hoagie-1.png"
-  // document.getElementById("text-breaker").appendChild(img);
-  const marqueeText = new Array(100).fill(title).join("-");
+  const contactTitle = "   Get in Touch  ";
+  const marqueeText = new Array(100).fill(contactTitle).join("-");
 
-  const marquee = document.querySelector(".marquee span");
+  const marquee = document.querySelector(".contact .marquee span");
   marquee.innerHTML = marqueeText;
 }
-
 makeMarquee();
 
 const animatedTags = document.querySelectorAll(
-  "h1, h3, p, section img, nav, a.button, #my-form, header, a.marquee, .marquee, a.js-scroll, .contact-direct"
+  "h1, h3, p, section img, nav, a.button, header, a.marquee, .marquee, a.js-scroll"
 );
 
 // fade out on load
@@ -61,7 +56,7 @@ const fadeIn = function () {
 
     if (tagTop < window.innerHeight && tagBottom > 0) {
       tag.style.animation = `fadein 1s ${delay}s both`;
-      delay = delay + 0.2;
+      delay = delay + 0.1;
     } else {
       tag.style.opacity = 0;
       tag.style.animation = "";
