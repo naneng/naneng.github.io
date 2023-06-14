@@ -272,7 +272,7 @@ section {
 }
 
 .about .image img:hover {
-  content: url("./assets/profilephotoBL.png");
+  content: url("./assets/profilephoto.png");
   opacity: 1;
   background-color: #FFF;
   /* width: 100%; */
