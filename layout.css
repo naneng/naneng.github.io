@@ -316,7 +316,7 @@ section {
       rgba(255, 0, 0, 0) 70.71%
     ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  margin: 120px 20px 20px 20px;
+  /* margin: 120px 20px 20px 20px; */
   
   --mask:
     radial-gradient(168.24px at 50% 228.00px,#000 99%,#0000 101%) calc(50% - 160px) 0/320px 51% repeat-x,
