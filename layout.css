@@ -262,21 +262,29 @@ section {
   transition: background-image 3s;
   padding: 10px auto 24px auto;
   opacity: 30%;
-  color: #708BD3;
+  /* color: #708BD3; */
   transform: translateY(-50%);
   /* z-index: 10; */
 }
 
+.about .image a {
+  text-decoration: none;
+}
+
+.about .image .marquee span:hover {
+  color: white;
+ 
+}
+
 .about .image .marquee span {
-  font-size: 10px;
+  color: var(--red);
+  font-size: 24px;
 }
 
 .about .image img:hover {
   content: url("./assets/profilephoto.png");
   opacity: 1;
   background-color: #FFF;
-  /* width: 100%; */
-  /* z-index: 50; */
   
 }
 
@@ -285,7 +293,7 @@ section {
   /* position: relative; */
   /* width: 300px; */
   /* height: 100px; */
-  margin: 10px 0 10px 0px;
+  margin: 10px 10px 10px 0px;
   /* padding: 10px 10px 10px 0; */
 }
 
@@ -293,12 +301,42 @@ section {
 
 /*      --------------play-------------        */
 .play {
-  margin: 20px auto 20px auto;
+  margin: 10px auto 0px auto;
+  /* padding: 10px; */
   display: flex;
   flex-direction: column;
   text-align: center;
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
 
+
+.svg-logo text {
+  animation: move-up 0.5s ease-in-out infinite alternate;
+  animation-delay: 0.25s;
+  /* transform-origin: inherit; */
+}
+
+.svg-logo text:first-child {
+  animation-name: move-down;
+}
+
+.svg-logo text:hover {
+  /* fill: var(--purple); */
+  /* fill: #7953de; */
+  fill: var(--red);
+}
+
+ .svg-logo {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 50px;
+  /* margin-bottom: 40px; */
+}
 /*      --------------play end-------------        */
 
 
@@ -325,24 +363,7 @@ section {
   border-bottom: 0.1rem solid;
 }
 
-.svg-logo text {
-  animation: move-up 0.5s ease-in-out infinite alternate;
-  animation-delay: 0.25s;
-  /* transform-origin: inherit; */
-}
 
-.svg-logo text:first-child {
-  animation-name: move-down;
-}
-
-.svg-logo text:hover {
-  fill: var(--purple);
-}
-
-.portfolio .svg-logo {
-  margin-top: 150px;
-  margin-bottom: 40px;
-}
 
 .portfolio .project:hover {
   background-color: #a9c9ff;
@@ -361,6 +382,7 @@ section {
   font-size: 50px;
   font-weight: 700;
 }
+
 .portfolio h3 {
   text-decoration: none;
   font-weight: 200;
@@ -369,13 +391,11 @@ section {
   background-color: whitesmoke;
   border-radius: 3px;
   padding: 0 2px;
-
 }
 
 .portfolio li {
   display: inline;
 }
-
 
 
 .portfolio .show-filters {

@@ -121,7 +121,11 @@ form.addEventListener("submit", handleSubmit);
 //filter animations
 const filterLanguages = document.querySelectorAll(".filters-list a");
 
+
 filterLanguages.forEach((language) => {
+  
+  
+
   language.addEventListener("click", function (event) {
     event.preventDefault();
 
