@@ -213,8 +213,11 @@ section {
 .about {
   min-height: 100vh;
   /* height: 500px; */
-  margin: 120px 20px 20px 20px;
+
 }
+
+
+
 
 .about .content {
   display: flex;
@@ -301,8 +304,9 @@ section {
 
 /*      --------------play-------------        */
 .play {
+  width: 100%;
   margin: 10px auto 0px auto;
-  /* padding: 10px; */
+  padding: 100px 0px 120px 0px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -312,6 +316,17 @@ section {
       rgba(255, 0, 0, 0) 70.71%
     ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  margin: 120px 20px 20px 20px;
+  
+  --mask:
+    radial-gradient(168.24px at 50% 228.00px,#000 99%,#0000 101%) calc(50% - 160px) 0/320px 51% repeat-x,
+    radial-gradient(168.24px at 50% -148px,#0000 99%,#000 101%) 50% 80px/320px calc(51% - 80px) repeat-x,
+    radial-gradient(168.24px at 50% calc(100% - 228.00px),#000 99%,#0000 101%) calc(50% - 160px) 100%/320px 51% repeat-x,
+    radial-gradient(168.24px at 50% calc(100% + 148.00px),#0000 99%,#000 101%) 50% calc(100% - 80px)/320px calc(51% - 80px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+
+  
 }
 
 
@@ -334,7 +349,7 @@ section {
  .svg-logo {
   margin-top: 30px;
   margin-left: 40px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   /* margin-bottom: 40px; */
 }
 /*      --------------play end-------------        */
