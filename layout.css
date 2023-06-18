@@ -181,19 +181,6 @@ section {
   /* min-height: 100vh; */
 }
 
-.about .scroll-to {
-  position: absolute;
-  left: 50%;
-  width: 30px;
-  height: 15px;
-
-  background-image: url(./assets/KA_arrow.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: translateX(-50%);
-  padding: 10px 0 10px 0;
-}
 
 /* .portfolio .scroll-to {
   right: 30px;
@@ -202,7 +189,6 @@ section {
 
 /* applies to multiple sections end */
 
-/*           ------about------              */
 
 .slide-down {
   animation: slide-down 3s forwards; /* define the slide-down animation */
@@ -210,14 +196,27 @@ section {
   /* z-index: 2; */
 }
 
+/*           ------about------              */
+
 .about {
   min-height: 100vh;
   /* height: 500px; */
-
+  
 }
 
-
-
+.about .scroll-to {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 15px;
+  
+  background-image: url(./assets/KA_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateX(-50%);
+  padding: 10px 0 10px 0;
+}
 
 .about .content {
   display: flex;
@@ -246,16 +245,23 @@ section {
   /* display: flex; */
   position: relative;
   text-align: center;
+  width: 50%;
 
+}
 
+.about .image canvas {
+  /* background-color: var(--purple); */
+  width: 100%;
+  margin: 0 auto 0 auto;
+  /* height: 100%; */
 }
 
 .about .image img {
   opacity: 30%;
-  width: 100%;
+  /* width: 100%; */
 }
 
-.about .image .marquee {
+/* .about .image .marquee {
   overflow: hidden;
   text-align: right;
   position: absolute;
@@ -265,9 +271,7 @@ section {
   transition: background-image 3s;
   padding: 10px auto 24px auto;
   opacity: 30%;
-  /* color: #708BD3; */
   transform: translateY(-50%);
-  /* z-index: 10; */
 }
 
 .about .image a {
@@ -282,9 +286,9 @@ section {
 .about .image .marquee span {
   color: var(--red);
   font-size: 24px;
-}
+} */
 
-.about .image img:hover {
+.about .image:hover {
   content: url("./assets/profilephoto.png");
   opacity: 1;
   background-color: #FFF;
