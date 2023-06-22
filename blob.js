@@ -23,11 +23,11 @@ class Blobbo {
       
     for (let num = 0; num < this.numOfPoints; num = num + 1) {
       let angle = TWO_PI * num / this.numOfPoints;
-      let r = 200 
-        + this.wave(num, 10, 3, 1) 
+      let r = 170 
+        + this.wave(num, 9, 3, 1) 
         + this.wave(num, 10, 7, 3) 
         + this.wave(num, 10, 9, 0) 
-        //+ this.wave(num, 2, 13, -5);
+        // + this.wave(num, 2, 13, -5);
        
       let x = (width  / 2) + r * cos(angle);
       let y = (height / 2) + r * sin(angle);
@@ -36,7 +36,7 @@ class Blobbo {
     }
     endShape();
     
-      this.time = this.time + 0.01;
+      this.time = this.time + 0.009;
       requestAnimationFrame(this.draw.bind(this));
 }
 }
