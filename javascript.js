@@ -159,3 +159,10 @@ filterLanguages.forEach((language) => {
 //   direction: "alternate",
 //   loop: true,
 // });
+
+
+
+new fullpage('#fullpage', {
+  autoScrolling: true,
+  scrollHorizontally: true
+})
