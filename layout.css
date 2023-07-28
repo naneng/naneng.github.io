@@ -589,7 +589,7 @@ input[type="message"] {
 
 button {
   font-family: "Rubik", Arial;
-  border-radius: 14git px;
+  border-radius: 14px;
   margin: 10px 10px 10px 0px;
   padding: 10px 35px 10px 35px;
   background-color: var(--red);
