@@ -102,11 +102,11 @@ header.scrolled {
   border-bottom-right-radius: 3px;
 }
 
-header.scrolled a:hover {
+/* header.scrolled a:hover { */
   /* color: var(--red); */
   /* text-shadow: 1px 1px 1px #000; */
   /* text-shadow: none; */
-}
+/* } */
 
 .logo,
 header nav {
@@ -129,9 +129,14 @@ header a:hover {
   /* color: #5B3F81; */
   /* color: #F64F28; */
   color: var(--red);
-  border-bottom: 0.1rem solid;
+  /* border-bottom: 0.1rem solid; */
   /* text-shadow: 1px 1px 1px #FFBBEC; */
+  /* box-shadow: rgb(112, 23, 42) 0 0 20px; */
+  box-shadow: rgb(112, 23, 42) 0 5px 7px -4px;
+    border: none;
+    border-radius: 5%;
 }
+
 
 div.face {
   position: relative;
