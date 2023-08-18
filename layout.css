@@ -89,7 +89,7 @@ header {
   height: 50px;
   background-color: #ffffff;
 
-  transition: background-color 5s;
+  transition: background-color 4s;
 }
 
 header.scrolled {
@@ -133,8 +133,8 @@ header a:hover {
   /* text-shadow: 1px 1px 1px #FFBBEC; */
   /* box-shadow: rgb(112, 23, 42) 0 0 20px; */
   box-shadow: rgb(112, 23, 42) 0 5px 7px -4px;
-    border: none;
-    border-radius: 5%;
+  border: none;
+  border-radius: 5%;
 }
 
 
@@ -193,6 +193,7 @@ section {
   height: 49px;
   box-shadow: rgb(0,0,0) 0 0 20px;
   top: 0;
+  transition: box-shadow 4s;
 
   background-image: url(./assets/KA_arrow.svg);
   background-repeat: no-repeat;
@@ -202,10 +203,12 @@ section {
   border-radius: 40%;
   /* padding: 30px 20px; */
   /* margin: 10px; */
+  z-index: 1;
 }
 
 .about .scroll-to:hover {
   box-shadow: rgb(112, 23, 42) 0 0 20px;
+  transition: box-shadow 1s;
   border: none;
 }
 
@@ -237,7 +240,7 @@ section {
   display: flex;
   margin: 48px;
   flex-direction: row;
-  position: relative;
+  /* position: relative; */
   /* width: 50%; */
 }
 
@@ -261,12 +264,10 @@ section {
   /* display: flex; */
   position: relative;
   text-align: center;
-
-
 }
 
 .about .image img {
-  opacity: 30%;
+  opacity: 10%;
   width: 100%;
 }
 
@@ -302,8 +303,11 @@ section {
 .about .image img:hover {
   content: url("./assets/profilephoto.png");
   opacity: 1;
-  background-color: #FFF;
-  
+  /* background-color: #FFF; */
+  transition: box-shadow 2s;
+  box-shadow: rgb(0,0,0) 0 0 34px;
+  /* border: none; */
+  border-radius: 50%;
 }
 
 
@@ -314,6 +318,8 @@ section {
   margin: 10px 10px 10px 0px;
   /* padding: 10px 10px 10px 0; */
 }
+
+
 
 /*   --      ----------------about end----------   --      */
 
@@ -611,14 +617,13 @@ button {
   color: #fff;
   outline: none;
   /* border: none; */
-
-  //* From https://css.glass */
-background: rgba(112, 23, 42, 1);
-/* border-radius: 16px; */
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(2.4px);
--webkit-backdrop-filter: blur(2.4px);
-border: 1px solid rgba(112, 23, 42, 0.3);
+  /* From https://css.glass */
+  background: rgba(112, 23, 42, 1);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.4px);
+  -webkit-backdrop-filter: blur(2.4px);
+  border: 1px solid rgba(112, 23, 42, 0.3);
   cursor: pointer;
   width:100%;
 }
@@ -722,6 +727,11 @@ button:hover {
     flex-direction: column;
     margin: 10px auto;
     align-items: center;
+  }
+
+  .about .scroll-to {
+    /* top:none; */
+    bottom: 10px;
   }
 
   .about .content div.content,

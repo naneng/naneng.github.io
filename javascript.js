@@ -162,7 +162,7 @@ filterLanguages.forEach((language) => {
 
 
 
-new fullpage('#fullpage', {
-  autoScrolling: true,
-  scrollHorizontally: true
-})
+// new fullpage('#fullpage', {
+//   autoScrolling: true,
+//   scrollHorizontally: true
+// })
