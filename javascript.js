@@ -29,7 +29,7 @@ document.addEventListener("scroll", function () {
 // marquee and animatedTag transition animations >>>>
 function makeMarquee() {
   const contactTitle = "   Get in Touch  ";
-  const marqueeText = new Array(100).fill(contactTitle).join("-");
+  const marqueeText = new Array(100).fill(contactTitle).join("~");
 
   const marquee = document.querySelector(".contact .marquee span");
   marquee.innerHTML = marqueeText;
