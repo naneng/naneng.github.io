@@ -185,12 +185,7 @@ div.iris div {
 
 /*              --header end--            */
 
-/* applies to all-multiple sections */
 
-section {
-  position: relative;
-  /* min-height: 100vh; */
-}
 
 .about .scroll-to {
   position: absolute;
@@ -238,8 +233,6 @@ section {
   /* height: 500px; */
 
 }
-
-
 
 
 .about .content {
@@ -381,24 +374,46 @@ section {
 }
 /*      --------------play end-------------        */
 
+/* applies to all-multiple sections */
+
+section {
+  /* position: relative; */
+  /* display: flex; */
+  max-width: 100%;
+  /* flex-direction: column; */
+  /* min-height: 100vh; */
+  /* margin: 20px auto; */
+  align-items: center;
+}
 
 
-/*      --------------portfolio-------------        */
+/*      --------------projects-------------        */
+#projects {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-.portfolio {
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.projects {
   display: flex;
   flex-direction: column;
   /* margin: 10px 20px 20px 20px; */
   /* width: 90vw; */
 }
 
-.portfolio a {
+.projects a {
   text-decoration: none;
   margin-right: 10px;
   color: #000;
 }
 
-.portfolio a:hover,
+.projects a:hover,
 .about a:hover {
   /* border-color: red; */
   color: var(--red);
@@ -407,7 +422,7 @@ section {
 
 
 
-.portfolio .project:hover {
+.projects .project:hover {
   background-color: #a9c9ff;
   background-image: linear-gradient(170deg, var(--purple) 0%, var(--lblue) 90%);
   /* border: #000 solid; */
@@ -420,12 +435,12 @@ section {
   box-shadow: none;
 }
 
-.portfolio h1 {
+.projects h1 {
   font-size: 50px;
   font-weight: 700;
 }
 
-.portfolio h3 {
+.projects h3 {
   text-decoration: none;
   font-weight: 200;
   font-size: 8px;
@@ -435,32 +450,32 @@ section {
   padding: 0 2px;
 }
 
-.portfolio li {
+.projects li {
   display: inline;
 }
 
 
-.portfolio .show-filters {
+.projects .show-filters {
   margin-right: 15px;
   font-size: 1em;
   font-weight: 500;
   pointer-events: none;
 }
 
-.portfolio .filters-list a.selected {
+.projects .filters-list a.selected {
   border-bottom: 3px solid var(--red);
 }
 
-.portfolio .w-100 {
+.projects .w-100 {
   margin: 20px;
 }
-.portfolio .w-200 {
+.projects .w-200 {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
 }
 
-.portfolio .w-25 {
+.projects .w-25 {
   flex: 0 1 236px;
   border: #000 solid;
   background: #ecf0f3;
@@ -470,16 +485,16 @@ section {
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-.portfolio .project a:hover {
+.projects .project a:hover {
   color: var(--purple);
 }
 
-/* .portfolio .project span {
+/* .projects .project span {
   text-decoration: none;
   color: var(--lblue);
 } */
 
-.portfolio .bg-purple {
+.projects .bg-purple {
   /* background-color: var(--purple); */
   background: linear-gradient(
       217deg,
@@ -491,7 +506,7 @@ section {
   box-shadow: none;
 }
 
-/*           ------portfolio end------              */
+/*           ------projects end------              */
 
 /*         ------------- contact-------------             */
 .contact {
@@ -687,6 +702,11 @@ button:hover {
   color: #000;
 }
 
+/* .contact .contact-logo img {
+  width: 100%;
+  margin: 0 auto;
+} */
+
 .contact .contact-social .contact-logo {
   margin: 20px auto;
   height: 65px;
@@ -717,7 +737,7 @@ button:hover {
 /* -------contact-direct div END------- */
 
 .contact .copyright {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .contact .copyright p {
@@ -746,11 +766,11 @@ button:hover {
     margin: 0;
   }
 
-  .portfolio {
+  .projects {
     align-items: center;
   }
 
-  .portfolio .w-100 {
+  .projects .w-100 {
     margin: 0;
   }
   .portfolio .w-200 {

@@ -1,30 +1,54 @@
+const link = document.createElement('a');
+link.href = 'https://naneng.github.io/katrinaariola/'; // Replace with your desired link
+
+// const htmlContent = `<!DOCTYPE html>
+//   <html lang="en-us">
+//     <head>
+//       <meta charset="UTF-8" />
+//       <title>Katrina.Ariola</title>
+//       <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
+//       <link rel="stylesheet" href="layout.css" type="text/css" />
+//       <script type="text/javascript" src="javascript.js"></script>
+//       <script type="text/javascript" src="p5.min.js"></script>
+//       <script type="text/javascript" src="blob.js"></script>
+//     </head>
+//     <body>
+      
+//     </body>
+//   </html>`;
+
+// link.innerHTML = htmlContent;
+
+document.body.appendChild(link);
+
+
 // header animation                >>>>>>>>>
 
-const headerTag = document.querySelector("header");
+// const headerTag = document.querySelector("header");
 
-const toggleHeader = function () {
-  const pixels = window.pageYOffset;
+// const toggleHeader = function () {
+//   const pixels = window.pageYOffset;
 
-  if (pixels > 60) {
-    headerTag.classList.add("scrolled");
-  } else {
-    headerTag.classList.remove("scrolled");
-  }
-};
+//   if (pixels > 60) {
+//     headerTag.classList.add("scrolled");
+//   } else {
+//     headerTag.classList.remove("scrolled");
+//   }
+// };
 
-const fadeBox = function () {
-  const pixels = window.pageYOffset;
-  const alpha = Math.min(pixels / 200, 0.5);
+// const fadeBox = function () {
+//   const pixels = window.pageYOffset;
+//   const alpha = Math.min(pixels / 200, 0.5);
 
-  headerTag.style.boxShadow = `0 0 10px rgba(0, 0, 0, ${alpha})`;
-};
-fadeBox();
-toggleHeader();
+//   headerTag.style.boxShadow = `0 0 10px rgba(0, 0, 0, ${alpha})`;
+// };
+// fadeBox();
+// toggleHeader();
 
-document.addEventListener("scroll", function () {
-  toggleHeader();
-  fadeBox();
-});
+// document.addEventListener("scroll", function () {
+//   toggleHeader();
+//   fadeBox();
+// });
 
 // marquee and animatedTag transition animations >>>>
 function makeMarquee() {
@@ -37,7 +61,8 @@ function makeMarquee() {
 makeMarquee();
 
 const animatedTags = document.querySelectorAll(
-  "h1, h3, p, section img, nav, a.button, header, a.marquee, .marquee,.contact-form, a.js-scroll"
+  // "h1, h3, p, section img, nav, a.button, header, a.marquee, .marquee,.contact-form, a.js-scroll"
+  "a.marquee, .marquee, .contact-form"
 );
 
 // fade out on load
