@@ -390,11 +390,16 @@ section {
   align-items: center;
 }
 
-
+.contact .logo-top {
+  position: absolute;
+  top: 10px;
+  margin: 10px auto 0px auto;
+}
 /*      --------------projects-------------        */
 #projects {
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 50px;
 }
 
 .projects .container {
@@ -461,10 +466,6 @@ section {
   display: inline;
 }
 
-.projects p {
-  /* color: var(--purple) */
-  /* color: white; */
-}
 
 
 .projects .show-filters {
@@ -739,10 +740,10 @@ button:hover {
 }
 
 .contact .contact-social .social a {
-  height: 30px;
-  width: 30px;
-  padding-left: 3px;
-  padding-right: 3px;
+  height: 40px;
+  width: 40px;
+  /* padding-left: 3px; */
+  /* padding-right: 3px; */
 }
 
 .contact .contact-social .social a.logo-b img {
