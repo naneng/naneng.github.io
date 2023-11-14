@@ -1,27 +1,3 @@
-const link = document.createElement('a');
-link.href = 'https://naneng.github.io/katrinaariola/'; // Replace with your desired link
-
-// const htmlContent = `<!DOCTYPE html>
-//   <html lang="en-us">
-//     <head>
-//       <meta charset="UTF-8" />
-//       <title>Katrina.Ariola</title>
-//       <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
-//       <link rel="stylesheet" href="layout.css" type="text/css" />
-//       <script type="text/javascript" src="javascript.js"></script>
-//       <script type="text/javascript" src="p5.min.js"></script>
-//       <script type="text/javascript" src="blob.js"></script>
-//     </head>
-//     <body>
-      
-//     </body>
-//   </html>`;
-
-// link.innerHTML = htmlContent;
-
-document.body.appendChild(link);
-
-
 // header animation                >>>>>>>>>
 
 // const headerTag = document.querySelector("header");
@@ -51,18 +27,18 @@ document.body.appendChild(link);
 // });
 
 // marquee and animatedTag transition animations >>>>
-function makeMarquee() {
-  const contactTitle = "   Get in Touch  ";
-  const marqueeText = new Array(100).fill(contactTitle).join("~");
+// function makeMarquee() {
+//   const contactTitle = "   Get in Touch  ";
+//   const marqueeText = new Array(100).fill(contactTitle).join("~");
 
-  const marquee = document.querySelector(".contact .marquee span");
-  marquee.innerHTML = marqueeText;
-}
-makeMarquee();
+//   const marquee = document.querySelector(".contact .marquee span");
+//   marquee.innerHTML = marqueeText;
+// }
+// makeMarquee();
 
 const animatedTags = document.querySelectorAll(
   // "h1, h3, p, section img, nav, a.button, header, a.marquee, .marquee,.contact-form, a.js-scroll"
-  "a.marquee, .marquee, .contact-form"
+  "h2, h3, p, section img, nav, section h1"
 );
 
 // fade out on load
@@ -139,7 +115,7 @@ async function handleSubmit(event) {
         "Uh oh, it looks like your message got lost, try again..";
     });
 }
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener("submit", handleSubmit);
 
 // portfolio animations
 
