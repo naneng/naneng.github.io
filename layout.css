@@ -10,9 +10,9 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Rubik", Arial;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", Arial;
 }
 
 /* rendered on animation.js file */
@@ -27,14 +27,12 @@
 
 @keyframes slide-down {
   from {
-    transform: translateY(
-      -100%
-    ); /* start the animation with the SVG above the container */
+    transform: translateY(-100%);
+    /* start the animation with the SVG above the container */
   }
   to {
-    transform: translateY(
-      0
-    ); /* end the animation with the SVG in the container */
+    transform: translateY(0);
+    /* end the animation with the SVG in the container */
   }
 }
 
@@ -74,47 +72,29 @@ body {
   /* background-color: #ffffff; */
   /* color: #020308; */
   background-color: #050816;
-  color: #FFF;
+  color: #fff;
   margin: 0;
 }
 
-/*             --header--                */
+/* --header-- */
 header {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; */
-
   position: -webkit-sticky;
   /* position: sticky; */
   top: 0px;
   z-index: 99999;
-
   display: flex;
   align-items: center;
 
-  /* margin: 0; */
-  /* padding: 0px 20px; */
   height: 50px;
   width: 100%;
   padding: 10px;
-  /* background-color: #ffffff; */
-
   transition: background-color 4s;
 }
 
 header.scrolled {
-  /* background-color: #000000; */
-
-  /* background-color: #A9C9FF;
-  background-image: linear-gradient(180deg, #FFBBEC 0%, #A9C9FF 40%); */
-
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-
-
 
 header img {
   /* width: 100%; */
@@ -123,7 +103,6 @@ header img {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-  
 }
 
 header img:hover {
@@ -133,17 +112,12 @@ header img:hover {
   transition: box-shadow 0.2s;
 }
 
-
-
-/*              --header end--            */
-
+/* --header end-- */
 
 section {
-  max-width: 100%;
+  /* max-width: 100vw; */
   align-items: center;
 }
-
-
 
 .projects .container {
   display: flex;
@@ -166,13 +140,11 @@ section {
   color: #FFF;
 }
 
-.projects a:hover,
-.about a:hover {
+.projects a:hover {
   /* border-color: red; */
   color: var(--purple);
   border-bottom: 0.1rem solid;
 }
-
 
 .projects .project:hover {
   background-color: #a9c9ff;
@@ -193,14 +165,13 @@ section {
   position: absolute;
   background-color: whitesmoke;
   border-radius: 3px;
-  padding: 0 2px;
+  padding: 0px 2px;
   color: var(--purple);
 }
 
 .projects li {
   display: inline;
 }
-
 
 .projects .show-filters {
   margin-right: 15px;
@@ -216,6 +187,7 @@ section {
 .projects .w-100 {
   margin: 20px auto;
 }
+
 .projects .w-200 {
   display: flex;
   flex-wrap: wrap;
@@ -226,195 +198,24 @@ section {
 .projects .w-25 {
   flex: 0 1 236px;
   border: var(--purple) solid;
-
   padding: 10px;
   padding-left: 20px;
   border-radius: 3px;
-  /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
 }
-
 
 .projects .project a:hover {
   color: var(--purple);
 }
 
-
 .projects .bg-purple {
-  background: "#444ae5";
+  background: #444ae5;
   background: linear-gradient(305deg, #5257dd 20%, #bf61ff 70%);
   background: -webkit-linear-gradient(305deg, #444ae5 20%, #bf61ff 70%);
-    border-radius: 10px;
+  border-radius: 10px;
   box-shadow: none;
 }
 
-/*           ------projects end------              */
-
-/*         ------------- contact-------------             */
-
-
-.marquee span {
-  animation: moveLeft 900s infinite;
-  white-space: nowrap;
-  display: block;
-  position: relative;
-  color: #fff;
-  font-size: 60px;
-}
-
-/* --------form styles---------- */
-
-.contact .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* flex-direction: row; */
-}
-
-.contact .container .contact-form,
-.contact .container .direct-contact {
-  flex: 1;
-  margin: 20px 40px 20px 40px;
-}
-
-.contact .container .contact-form {
-  max-width: 375px;
-  padding: 10px;
- 
-}
-
-.contact .contact-form .app-form-group {
-
-  margin: 10px auto;
-  display: flex;
-
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-input {
-  font-family: "Rubik", Arial;
-  /* display: inline-block; */
-  background: none;
-
-  font-size: 10px;
-  font-weight: 200;
-  color: var(--red);
-  padding: 10px;
-  
-}
-
-input[type="email"] {
-  height: 40px;
-  border: none;
-  outline: none;
-}
-
-input[type="message"] {
-  height: 90px;
-  border: none;
-  flex-grow:1;
-}
-
-.contact .contact-form input:focus {
-  background: none;
-  border: none;
-  /* border-bottom: 3px solid var(--red); */
-  color: #fff;
-  font-size: 12px;
-  outline: none;
-  transition: border-color 0.3s;
-}
-::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.contact .contact-form input[type="message"]:focus {
-  /* border-top: 3px solid var(--red); */
-  border: none;
-  font-size: 12px;
-}
-
-button {
-  font-family: "Rubik", Arial;
-  border-radius: 14px;
-  margin: 10px 10px 10px 0px;
-  padding: 10px 35px 10px 35px;
-  background-color: var(--red);
-  color: #fff;
-  outline: none;
-  /* border: none; */
-  /* From https://css.glass */
-  background: rgba(112, 23, 42, 1);
-  /* border-radius: 16px; */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.4px);
-  -webkit-backdrop-filter: blur(2.4px);
-  border: 1px solid rgba(112, 23, 42, 0.3);
-  cursor: pointer;
-  width:100%;
-}
-
-button:hover {
-  /* box-shadow: 2px 4px 5px 3px rgb(95 18 35 / 40%); */
-  box-shadow: rgb(125, 16, 16) 0px 10px 30px -8px;
-  /* background-color: #9b0828; */
-  background-color: #fff;
-  color: var(--red);
-  transition: width 5s;
-  transition: box-shadow 2s;
-
-}
-
-.contact #my-form-status {
-  color: var(--red);
-  font-size: 10px;
-}
-
-/* --------form styles end---------- */
-
-/* -------contact-direct div------- */
-
-.contact .contact-direct .contact-list {
-  /* border-bottom: #fff 1px solid; */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  list-style-type: none;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.contact .contact-direct .contact-list .list-item {
-  width: 100%;
-  display: flex;
-  vertical-align: center;
-  margin-bottom: 10px;
-}
-
-.contact .contact-direct svg {
-  height: 20px;
-  width: 20px;
-}
-
-.contact .contact-direct span {
-  margin-left: 45px;
-  font-size: 10px;
-  margin-top: auto;
-}
-
-#contact .contact-text a {
-  pointer-events: none;
-  text-decoration: none;
-  color: #000;
-}
-
-
-/* -------contact-direct div END------- */
-
+/* --contact-- */
 .contact .copyright {
   margin-bottom: 10px;
 }
@@ -425,33 +226,25 @@ button:hover {
   padding: 10px 10px 0px 10px;
 }
 
-/*             --contact end--             */
+/* --contact end-- */
 
+/* Media Query */
 @media (max-width: 735px) {
-  /* .projects {
-    display: flex;
-    flex-direction: column;
-  } */
-
   .projects .w-100 {
-    width: 100%;
-    /* display: flex; */
-    /* flex-direction: row; */
+    /* width: 100%; */
     margin: 10px auto;
   }
+
   .projects .w-200 {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px auto;
-    /* justify-content: center; */
+    margin: 5px auto;
   }
 
   .projects .w-25 {
-    width: 100%;
+    /* width: 100%; */
+    flex: 1 1 100%;
     padding: 10px;
     padding-left: 10px;
-    /* border-radius: 3px; */
-    /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
   }
-
 }
