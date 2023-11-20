@@ -403,6 +403,7 @@ header img:hover {
  h1 {
   font-size: 50px;
   font-weight: 700;
+  text-align: center;
 }
 
 .projects h3 {
@@ -425,6 +426,7 @@ header img:hover {
   font-size: 1em;
   font-weight: 500;
   pointer-events: none;
+  text-align: center;
 }
 
 
