@@ -113,14 +113,19 @@ function handleMouseMove(evt) {
       y: mouseY,
       stagger: -0.1
     });
+  } else {
+    gsap.set(shape, {
+      x: 0,
+      y: 0
+    });
   }
 }
 
 document.addEventListener("mousemove", handleMouseMove);
 document.addEventListener("touchmove", handleMouseMove);
 
-
 document.body.addEventListener("mousemove", handleMouseMove);
+
 
 
 // cursor end
