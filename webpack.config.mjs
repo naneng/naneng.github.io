@@ -6,4 +6,7 @@ module.exports = {
     filename: "build/application.js",
   },
   devtool: "sourcemap",
+  module: {
+    type: "module",
+  },
 };

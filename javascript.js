@@ -72,3 +72,55 @@ filterLanguages.forEach((language) => {
   });
 });
 
+
+// cursor
+// const gsap = require('gsap');
+// const cursor = document.querySelector(".cursor");
+// const shape = document.querySelectorAll(".shape");
+
+// document.body.addEventListener("mousemove", function(evt) {
+//   const mouseX = evt.clientX;
+//   const mouseY = evt.clientY;
+  
+  
+//   gsap.set(cursor, {
+//     x: mouseX,
+//     y: mouseY
+//   });
+  
+//   gsap.to(shape, {
+//     x: mouseX,
+//     y: mouseY,
+//     stagger: -0.1
+//   });
+// });
+
+const cursor = document.querySelector(".cursor");
+const shape = document.querySelectorAll(".shape");
+
+function handleMouseMove(evt) {
+  const mouseX = evt.clientX || evt.touches[0].clientX;
+  const mouseY = evt.clientY || evt.touches[0].clientY;
+
+  gsap.set(cursor, {
+    x: mouseX,
+    y: mouseY
+  });
+
+  if (window.innerWidth >= 735) {
+    gsap.to(shape, {
+      x: mouseX,
+      y: mouseY,
+      stagger: -0.1
+    });
+  }
+}
+
+document.addEventListener("mousemove", handleMouseMove);
+document.addEventListener("touchmove", handleMouseMove);
+
+
+document.body.addEventListener("mousemove", handleMouseMove);
+
+
+// cursor end
