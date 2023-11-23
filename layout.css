@@ -120,7 +120,7 @@ header img:hover {
 /* cursor */
 
 .cursor {
-  position: fixed;
+  /* position: fixed;
   background: var(--purple);
   width: 20px;
   height: 20px;
@@ -132,7 +132,20 @@ header img:hover {
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 10000; */
+    position: fixed;
+    background: var(--purple);
+    width: 20px;
+    height: 20px;
+    margin: -98px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
 }
 
 
@@ -148,16 +161,33 @@ header img:hover {
 
 .shapes {
   position: relative;
-  height: 100vh;
+  height:100vh;
   width: 100vw;
   /* background: #2128bd; */
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: -90px;
+}
+
+.h-100 .cursor {
+  margin: -10px 0 0 -10px;
+  /* position: fixed;
+  background: var(--purple);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  will-change: transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000; */
 }
 
 .shape {
   will-change: transform;
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   border-radius: 50%;
 }
 .shape.shape-1 {
@@ -183,10 +213,10 @@ header img:hover {
   top: 0;
   left: 0;
   position: absolute;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center; */
+  height:100vh;
   width: 100vw;
   /* background: #fff; */
   mix-blend-mode: screen;
@@ -222,12 +252,13 @@ header img:hover {
     box-sizing: border-box;
     -webkit-backdrop-filter: blur(54px);
     backdrop-filter: blur(54px);
-    border-radius: 7.3rem;
+    /* border-radius: 7.3rem; */
+    border-radius: 100%;
     display: flex;
     /* flex-direction: row; */
-    align-items: center;
-    padding: 6vh 8vh;
-    position: relative;
+    /* align-items: center; */
+    /* padding: 8vh 8vh; */
+    /* position: relative; */
     /* box-shadow: rgb(92 62 132 / 35%) 0px 5px 15px; */
     box-shadow:rgb(66 45 112 / 25%) 0px 54px 55px, rgb(102 60 150 / 12%) 0px -12px 30px, rgb(83 12 150 / 12%) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
@@ -353,10 +384,6 @@ header img:hover {
 }
 
 
-
-
-
-
 /* landing page end */
 
 /* projects */
@@ -365,7 +392,9 @@ header img:hover {
   display: flex;
   flex-direction: column;
   /* margin-top: 60px; */
-  margin: 0px 20px 20px 20px;
+  margin: 76px 20px 20px 20px;
+  /* height: 100vh;
+  width: 100vw; */
 }
 
 .projects .container {
@@ -469,10 +498,10 @@ header img:hover {
 /* projects end */
 
 /* --footer-- */
-.sticky {
+/* .sticky {
   position: fixed;
   bottom: 0;
-}
+} */
 .copyright {
   width: 100%;
   margin: 10px auto;
@@ -488,9 +517,9 @@ header img:hover {
 
 /* Media Query */
 @media (max-width: 735px) {
-  .project-card {
+  /* .project-card {
     padding: 4vw;
-  }
+  } */
 
   /* .bg-home {
     width: 100%;
@@ -595,20 +624,13 @@ header img:hover {
   margin: -135px 0 0 -135px;
 }
 
-.content {
-  /* top: 0;
-  left: 0;
-  position: absolute; */
+/* .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  /* background: #fff; */
   mix-blend-mode: screen;
   cursor: pointer;
-  /* padding: 30px; */
-}
+} */
 
 
 }

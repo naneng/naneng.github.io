@@ -95,6 +95,12 @@ filterLanguages.forEach((language) => {
 //   });
 // });
 
+
+
+
+
+
+// const gsap = require("gsap");
 const cursor = document.querySelector(".cursor");
 const shape = document.querySelectorAll(".shape");
 
@@ -123,9 +129,48 @@ function handleMouseMove(evt) {
 
 document.addEventListener("mousemove", handleMouseMove);
 document.addEventListener("touchmove", handleMouseMove);
+window.addEventListener("scroll", handleMouseMove);
 
-document.body.addEventListener("mousemove", handleMouseMove);
+// document.body.addEventListener("mousemove", handleMouseMove);
 
+
+
+// const cursor = document.querySelector(".cursor");
+// const shapes = document.querySelectorAll(".shape");
+
+// // Import gsap from the required library
+// // const gsap = require("gsap");
+
+// function handleMouseMove(evt) {
+//   const mouseX = evt.clientX || evt.touches[0].clientX;
+//   const mouseY = evt.clientY || evt.touches[0].clientY;
+
+//   const scrollX = window.pageXOffset;
+//   const scrollY = window.pageYOffset;
+
+//   gsap.set(cursor, {
+//     x: mouseX - scrollX,
+//     y: mouseY - scrollY
+//   });
+
+//   if (window.innerWidth >= 735) {
+//     gsap.to(shapes, {
+//       x: mouseX - scrollX,
+//       y: mouseY - scrollY,
+//       stagger: -0.1
+//     });
+//   } else {
+//     gsap.set(shapes, {
+//       x: 0,
+//       y: 0
+//     });
+//   }
+// }
+
+// document.addEventListener("mousemove", handleMouseMove);
+// document.addEventListener("touchmove", handleMouseMove);
+
+// document.body.addEventListener("mousemove", handleMouseMove);
 
 
 // cursor end
