@@ -1,7 +1,7 @@
 
 const animatedTags = document.querySelectorAll(
   // "h1, h3, p, section img, nav, a.button, header, a.marquee, .marquee,.contact-form, a.js-scroll"
-  "header img, header nav, h1, .projects .project"
+  "header img, header nav, .show-filters, .filters-list, h1, .projects .project"
 );
 
 // fade out on load
